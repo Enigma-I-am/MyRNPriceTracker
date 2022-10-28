@@ -2,7 +2,7 @@
 
 !<img src="./screenshots/rn_01.png" width="250"/>
 !<img src="./screenshots/rn_02.png" width="250"/>
-!<img src="./screenshots/rn_03.png" width="250"/>
+<img src="./screenshots/rn_03.png" width="250"/>
 !<img src="./screenshots/rn_04.png" width="250"/>
 
 A sample app implemented to show user a list of new coins and their detail.
