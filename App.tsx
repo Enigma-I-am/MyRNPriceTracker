@@ -73,7 +73,9 @@ const App = () => {
   const RenderItem = ({item}: {item: string}) => {
     const icons = item.replace(/[^a-zA-Z0-9 ]/g, '').toLocaleLowerCase();
     return (
-      <TouchableOpacity onPress={usePresentModalPress(item)}>
+      <TouchableOpacity
+        testID="flatlist_render_item"
+        onPress={usePresentModalPress(item)}>
         <View style={[styles.TextViewStyle, borderStyle]}>
           <Text style={{color: isDarkMode ? Colors.lighter : Colors.darker}}>
             {item.replace(/[^a-zA-Z0-9 ]/g, '')}
@@ -99,6 +101,7 @@ const App = () => {
     <SafeAreaView style={backgroundStyle}>
       <View style={styles.viewPadding}>
         <Searchbar
+          testID="search_bar"
           elevation={0}
           style={[styles.SearchBarStyle, borderStyle]}
           placeholder="Search"
@@ -107,10 +110,9 @@ const App = () => {
         />
 
         <FlatList
-          // style={{alignSelf: 'baseline'}}
-          // horizontal={true}
+          testID="coin_flatlist"
           data={searchInput.length > 1 ? filteredRates : currencies}
-          // showsHorizontalScrollIndicator={false}
+          keyExtractor={(item, index) => item + index}
           renderItem={item => <RenderItem item={item.item} />}
         />
         <BottomSheetModal

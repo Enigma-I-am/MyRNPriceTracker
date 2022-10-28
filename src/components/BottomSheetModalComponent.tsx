@@ -13,7 +13,9 @@ const BottomSheetModalComponent = (item: {item: Rate; iconPair: Element}) => {
       <View style={styles.iconsContainer}>
         <>{item.iconPair}</>
       </View>
-      <Text style={[styles.price, textColor]}>{item.item.rate}</Text>
+      <Text style={[styles.price, textColor]}>
+        {item.item.rate.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}
+      </Text>
 
       <Text style={styles.key}>key: {item.item.key}</Text>
     </View>

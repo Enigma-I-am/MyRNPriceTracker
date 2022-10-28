@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 
 const CompareIcon = () => {
   const isDarkMode = useColorScheme() === 'dark';
-  const iconColor = isDarkMode ? '#FFFFFF' : '#FFFFFF';
+  const iconColor = isDarkMode ? '#FFFFFF' : '#000000';
   return (
     <MaterialCommunityIcon
       name="compare-horizontal"
