@@ -51,6 +51,6 @@ yarn android # for android
 **Run e2e test for iOS**
 
 ```bash
-yarn e2e:test:ios # for iOS
-yarn e2e:build:ios # for android
+yarn e2e:test:ios 
+yarn e2e:build:ios 
 ```
